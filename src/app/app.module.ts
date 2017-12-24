@@ -10,6 +10,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AuthProvider } from '../providers/auth/auth';
+import { KategoriProvider } from '../providers/kategori/kategori';
+import { MainProvider } from '../providers/main/main';
+import { MateriProvider } from '../providers/materi/materi';
+import { MlearningProvider } from '../providers/mlearning/mlearning';
+import { PanduanProvider } from '../providers/panduan/panduan';
+import { PengumumanProvider } from '../providers/pengumuman/pengumuman';
 
 @NgModule({
   declarations: [
@@ -34,7 +41,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider,
+    KategoriProvider,
+    MainProvider,
+    MateriProvider,
+    MlearningProvider,
+    PanduanProvider,
+    PengumumanProvider
   ]
 })
 export class AppModule {}
